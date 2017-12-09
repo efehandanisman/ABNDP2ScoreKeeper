@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.worldcup.MainActivity">
+
+    <ImageView
+        android:alpha="0.3"
+        android:background="@drawable/wc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#2962FF"
+        android:textStyle="bold"
+        android:text="World Cup 2018 Final"
+        android:gravity="center"
+        android:textSize="22dp"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitCenter"
+            android:layout_gravity="left"
+            android:background="@drawable/arg"
+            android:id="@+id/argentina"
+            android:layout_width="65dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="33dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textColor="#2962FF"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_gravity="left"
+        android:textSize="16sp"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+            android:id="@+id/argScore"
+        android:layout_height="wrap_content"
+        android:text="0"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="left"
+        android:textSize="16sp"
+        />
+
+
+        <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/goal" android:layout_marginLeft="35dp"
+        android:clickable="true"
+            android:onClick="addgoalforArgentina"
+            android:scaleType="fitXY"
+            android:layout_marginTop="1dp"
+        android:layout_gravity="left"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shots"
+        android:textColor="#2962FF"
+        android:textStyle="bold"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="left"
+        android:textSize="16sp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+            android:id="@+id/argShot"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="left"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/shoot"
+            android:onClick="addshotforArgentina"
+            android:scaleType="fitCenter"
+        android:clickable="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="left"
+        />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/yellowcardArg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="1dp"
+                android:textColor="#2962FF"
+                android:textStyle="bold"
+               android:layout_marginLeft="18dp"
+
+                android:text="0"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:onClick="addyellowcardforArgentina"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:src="@drawable/yellow"
+
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/redcardArg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="18dp"
+                    android:textColor="#2962FF"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:onClick="addredcardforArgentina"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:src="@drawable/red"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/fr"
+            android:id="@+id/fra"
+            android:layout_width="65dp"
+            android:layout_marginTop="45dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Score"
+            android:layout_marginTop="15dp"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/fraScore"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:textSize="16sp"
+            />
+
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/goal"
+            android:clickable="true"
+            android:onClick="addgoalforFrance"
+            android:scaleType="fitXY"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shots"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/fraShot"
+            android:textColor="#2962FF"
+            android:textStyle="bold"
+
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/shoot"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:onClick="addshotforFrance"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/yellowcardFra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#2962FF"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:onClick="addyellowcardforFrance"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/yellow"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/redcardFra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"
+                    android:textColor="#2962FF"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:onClick="addredcardforFrance"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:src="@drawable/red"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="32dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:onClick="resetScore"
+        android:src="@drawable/reset" />
+
+
+</RelativeLayout>
