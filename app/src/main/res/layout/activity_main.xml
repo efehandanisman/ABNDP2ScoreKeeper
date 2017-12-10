@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textColor="#2962FF"
         android:textStyle="bold"
-        android:text="World Cup 2018 Final"
+        android:text="@string/wcfinal2018"
         android:gravity="center"
         android:textSize="22dp"
         />
@@ -52,7 +52,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score"
+        android:text="@string/score"
         android:textColor="#2962FF"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
             android:id="@+id/argScore"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/zero"
             android:textColor="#2962FF"
             android:textStyle="bold"
         android:layout_marginLeft="60dp"
@@ -88,7 +88,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shots"
+        android:text="@string/shots"
         android:textColor="#2962FF"
         android:textStyle="bold"
         android:layout_marginLeft="45dp"
@@ -100,7 +100,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/zero"
             android:textColor="#2962FF"
             android:textStyle="bold"
             android:id="@+id/argShot"
@@ -145,7 +145,7 @@
                 android:textStyle="bold"
                android:layout_marginLeft="18dp"
 
-                android:text="0"
+                android:text="@string/zero"
                 android:textSize="16sp" />
 
             <ImageButton
@@ -174,7 +174,7 @@
                     android:layout_marginLeft="18dp"
                     android:textColor="#2962FF"
                     android:textStyle="bold"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -210,7 +210,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Score"
+            android:text="@string/score"
             android:layout_marginTop="15dp"
             android:textColor="#2962FF"
             android:textStyle="bold"
@@ -219,7 +219,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/zero"
             android:id="@+id/fraScore"
             android:textColor="#2962FF"
             android:textStyle="bold"
@@ -242,7 +242,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shots"
+            android:text="@string/shots"
             android:textColor="#2962FF"
             android:textStyle="bold"
             android:layout_marginTop="18dp"
@@ -253,7 +253,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
+            android:text="@string/zero"
             android:id="@+id/fraShot"
             android:textColor="#2962FF"
             android:textStyle="bold"
@@ -296,7 +296,7 @@
                     android:layout_gravity="center_horizontal"
                     android:textColor="#2962FF"
                     android:textStyle="bold"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="16sp" />
 
                 <ImageButton
@@ -325,7 +325,7 @@
                     android:layout_marginTop="1dp"
                     android:textColor="#2962FF"
                     android:textStyle="bold"
-                    android:text="0"
+                    android:text="@string/zero"
                     android:textSize="16sp" />
 
                 <ImageButton

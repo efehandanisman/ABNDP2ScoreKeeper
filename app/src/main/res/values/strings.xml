@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">World Cup</string>
+    <string name="wcfinal2018">World Cup 2018 Final</string>
+    <string name="score">Score</string>
+    <string name="shots">Shots</string>
+    <string name="zero">0</string>
 </resources>
