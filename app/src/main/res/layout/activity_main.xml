@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.android.worldcup.MainActivity">
 
     <ImageView
         android:alpha="0.3"
-        android:background="@drawable/wc"
+        android:src="@drawable/wc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="120dp"
+        android:scaleType="centerCrop"
 
         />
 
@@ -38,7 +39,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -165,7 +166,7 @@
         </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
@@ -196,7 +197,7 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -280,7 +281,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center_horizontal"
 
@@ -316,7 +317,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
@@ -344,19 +345,22 @@
 
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
+
     </LinearLayout>
     <ImageButton
         android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
-        android:layout_marginBottom="32dp"
+       android:layout_marginTop="500dp"
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:onClick="resetScore"
         android:src="@drawable/reset" />
 
 
+
+
 </RelativeLayout>
-</ScrollView>
+    </ScrollView>
