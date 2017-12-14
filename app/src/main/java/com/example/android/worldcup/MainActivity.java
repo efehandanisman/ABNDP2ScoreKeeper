@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,11 +18,8 @@ public class MainActivity extends AppCompatActivity {
     int yellowcardFra = 0;
     int redcardFra = 0;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+
+
 
     /**
      * Fruit of football. Goal for Argentina.
@@ -58,12 +53,11 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Ops");
         builder.setMessage("Argentina can not continue with 7 player").setCancelable(true);
         AlertDialog alert = builder.create();
-        redcardArg= redcardArg + 1;
+        redcardArg = redcardArg + 1;
         if (redcardArg < 4) {
             alert.dismiss();
             displayredcardForArgentina(redcardArg);
-        }
-        else {
+        } else {
             alert.show();
             displayForArgentina(0);
             displayForFrance(0);
@@ -75,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             displayredcardForFrance(0);
         }
     }
+
     /**
      * Oh la la! Goal for France.
      */
@@ -109,23 +104,22 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Ops");
         builder.setMessage("France can not continue with 7 player").setCancelable(true);
         AlertDialog alert = builder.create();
-        redcardFra= redcardFra + 1;
-            if (redcardFra < 4) {
+        redcardFra = redcardFra + 1;
+        if (redcardFra < 4) {
             alert.dismiss();
             displayredcardForFrance(redcardFra);
+        } else {
+            alert.show();
+            displayForArgentina(0);
+            displayForFrance(0);
+            displayshotsForFrance(0);
+            displayshotsForArgentina(0);
+            displayyellowcardForArgentina(0);
+            displayyellowcardForFrance(0);
+            displayredcardForArgentina(0);
+            displayredcardForFrance(0);
         }
-            else {
-                alert.show();
-                displayForArgentina(0);
-                displayForFrance(0);
-                displayshotsForFrance(0);
-                displayshotsForArgentina(0);
-                displayyellowcardForArgentina(0);
-                displayyellowcardForFrance(0);
-                displayredcardForArgentina(0);
-                displayredcardForFrance(0);
-                }
-}
+    }
 
     /**
      * Displays the given score for Argentina.
@@ -134,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.argScore);
         scoreView.setText(String.valueOf(score));
     }
+
     /**
      * Displays the shots for Argentina.
      */
@@ -141,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.argShot);
         scoreView.setText(String.valueOf(shot));
     }
-/**
+
+    /**
      * Displays the yellow cards for Argentina.
      */
     public void displayyellowcardForArgentina(int card) {
@@ -162,10 +158,10 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void resetScore(View v) {
-       argScore= 0;
+        argScore = 0;
         argShot = 0;
         yellowcardArg = 0;
-        redcardArg= 0;
+        redcardArg = 0;
         fraScore = 0;
         fraShot = 0;
         yellowcardFra = 0;
@@ -179,12 +175,49 @@ public class MainActivity extends AppCompatActivity {
         displayredcardForArgentina(0);
         displayredcardForFrance(0);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("argScore", argScore);
+        outState.putInt("fraScore", fraScore);
+        outState.putInt("yellowcardArg", yellowcardArg);
+        outState.putInt("yellowcardFra", yellowcardFra);
+        outState.putInt("redcardFra", redcardFra);
+        outState.putInt("redcardArg", redcardArg);
+        outState.putInt("argShot", argShot);
+        outState.putInt("fraShot", fraShot);
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        argScore = savedInstanceState.getInt("argScore");
+        fraScore = savedInstanceState.getInt("fraScore");
+        yellowcardFra = savedInstanceState.getInt("yellowcardFra");
+        redcardFra = savedInstanceState.getInt("redcardFra");
+        yellowcardArg = savedInstanceState.getInt("yellowcardArg");
+        redcardArg = savedInstanceState.getInt("redcardArg");
+        argShot = savedInstanceState.getInt("argShot");
+        fraShot = savedInstanceState.getInt("fraShot");
+        displayForArgentina(argScore);
+        displayForFrance(fraScore);
+        displayshotsForFrance(fraShot);
+        displayshotsForArgentina(argShot);
+        displayyellowcardForArgentina(yellowcardArg);
+        displayyellowcardForFrance(yellowcardFra);
+        displayredcardForArgentina(redcardArg);
+        displayredcardForFrance(redcardFra);
+    }
+
     /**
      * Displays the given score for France.
      */
 
     public void displayForFrance(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.fraScore);
+        TextView scoreView = findViewById(R.id.fraScore);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -195,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.fraShot);
         scoreView.setText(String.valueOf(shot));
     }
+
     /**
      * Displays the yellow cards for France.
      */
@@ -212,3 +246,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
