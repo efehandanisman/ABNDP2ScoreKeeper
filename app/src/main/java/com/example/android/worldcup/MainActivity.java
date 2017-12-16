@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addgoalforArgentina(View v) {
         argScore = argScore + 1;
+        argShot = argShot + 1;
         displayForArgentina(argScore);
+        displayshotsForArgentina(argShot);
     }
 
     /**
@@ -79,7 +81,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addgoalforFrance(View v) {
         fraScore = fraScore + 1;
+        fraShot = fraShot + 1;
         displayForFrance(fraScore);
+        displayshotsForFrance(fraShot);
     }
 
     /**
