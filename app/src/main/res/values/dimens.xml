@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="resetbuttonmargin">550dp</dimen>
+    <dimen name="resetbuttonwidth">70dp</dimen>
+    <dimen name="resetbuttonheight">50dp</dimen>
+    <dimen name="cardsize">35dp</dimen>
+    <dimen name="cardleftmargin">15dp</dimen>
+    <dimen name="cardtextleftmargin">10dp</dimen>
+    <dimen name="cardtexttopmargin">1dp</dimen>
+    <dimen name="cardtextsize">16sp</dimen>
+    <dimen name="shotsize">60dp</dimen>
+    <dimen name="dp3topmargin">3dp</dimen>
+    <dimen name="dp18topmargin">18dp</dimen>
+<dimen name="frawidth">65dp</dimen>
+    <dimen name="fraheight">90dp</dimen>
+    <dimen name="fratopmargin">45dp</dimen>
+    <dimen name="dp0width">0dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="titlesize">22sp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp125">125dp</dimen>
+    <dimen name="dp53">53dp</dimen>
+    <dimen name="dp22">22dp</dimen>
+    <dimen name="dp33">33dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+</resources>
+
